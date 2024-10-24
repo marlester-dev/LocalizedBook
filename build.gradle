@@ -71,7 +71,8 @@ subprojects {
                 "mod_id": mod_id,
                 "license": license,
                 "description": project.description,
-                "nightconfig_version": nightconfig_version
+                "nightconfig_version": nightconfig_version,
+                "patchouli_version": patchouli_version
         ]
 
         filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
