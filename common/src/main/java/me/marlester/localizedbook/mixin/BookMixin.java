@@ -1,5 +1,7 @@
 package me.marlester.localizedbook.mixin;
 
+import com.electronwill.nightconfig.core.Config;
+import java.util.List;
 import me.marlester.localizedbook.core.LocalizedBook;
 import net.minecraft.resources.ResourceLocation;
 import org.spongepowered.asm.mixin.Final;
@@ -17,10 +19,12 @@ public class BookMixin {
   @Shadow
   @Final
   public String name;
+  @Mutable
   @Shadow
   @Final
   public String landingText;
   @Shadow
+  @Mutable
   @Final
   public String subtitle;
   @Shadow
@@ -29,6 +33,12 @@ public class BookMixin {
 
   @Inject(at = @At("TAIL"), method = "<init>")
   private void init(CallbackInfo info) {
-    LocalizedBook.LOGGER.info(id);
+    String bookId = id.toString();
+    List<String> book = LocalizedBook.mainConfig.get(bookId);
+    if (book != null) {
+      name = book.get(0);
+      landingText = book.get(1);
+      subtitle = book.get(2);
+    }
   }
 }
