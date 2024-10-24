@@ -7,6 +7,7 @@ plugins {
 base {
     archivesName = "${mod_name}-fabric-${minecraft_version}"
 }
+
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.officialMojangMappings()
@@ -17,6 +18,7 @@ dependencies {
 
     include implementation("com.electronwill.night-config:toml:${nightconfig_version}")
     include implementation("com.electronwill.night-config:core:${nightconfig_version}")
+    modCompileOnly "vazkii.patchouli:Patchouli:${patchouli_version}-FABRIC"
 }
 
 loom {

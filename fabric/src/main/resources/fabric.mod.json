@@ -1,22 +1,18 @@
 {
     "schemaVersion": 1,
-    "id": "mod_id",
+    "id": "${mod_id}",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
         "${mod_author}"
     ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
     "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
+    "icon": "localizedbook_icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "me.marlester.localizedbook.fabric.LocalizedBookFabric"
         ]
     },
     "mixins": [
@@ -24,13 +20,11 @@
         "${mod_id}.fabric.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14",
+        "fabricloader": "*",
         "fabric": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
+        "java": ">=17",
+        "patchouli": ">=${patchouli_version}-FABRIC"
     }
 }
   

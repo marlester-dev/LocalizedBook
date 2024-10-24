@@ -36,6 +36,7 @@ dependencies {
 
     compileOnly("com.electronwill.night-config:toml:${nightconfig_version}")
     compileOnly("com.electronwill.night-config:core:${nightconfig_version}")
+    compileOnly "vazkii.patchouli:Patchouli-xplat:${patchouli_version}"
 }
 
 publishing {
