@@ -1,6 +1,5 @@
 package me.marlester.localizedbook.mixin;
 
-import com.electronwill.nightconfig.core.Config;
 import java.util.List;
 import me.marlester.localizedbook.core.LocalizedBook;
 import net.minecraft.resources.ResourceLocation;
