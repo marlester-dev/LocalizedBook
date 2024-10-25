@@ -35,9 +35,18 @@ public class BookMixin {
     String bookId = id.toString();
     List<String> book = LocalizedBook.mainConfig.get(bookId);
     if (book != null) {
-      name = book.get(0);
-      landingText = book.get(1);
-      subtitle = book.get(2);
+      var text0 = book.get(0);
+      if (!text0.equals("default")) {
+        name = text0;
+      }
+      var text1 = book.get(1);
+      if (!text1.equals("default")) {
+        landingText = text1;
+      }
+      var text2 = book.get(2);
+      if (!text2.equals("default")) {
+        subtitle = text2;
+      }
     }
   }
 }

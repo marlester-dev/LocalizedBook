@@ -12,7 +12,8 @@ public class MainConfig extends Config {
 
   @Override
   public void load() {
-    // an example:
-    //add("examplemod:examplebook", List.of("name", "landingtext", "subtitle"), "Example for book translation for a book with id 'examplemod:examplebook'. The first element in the list is name. The second is landingtext. The third is title.");
+    // examples:
+    //add("examplemod:examplebook", List.of("name, can be 'default'", "landingtext, can be 'default'", "subtitle, can be 'default'"), "Example for book translation for a book with id 'examplemod:examplebook'. The first element in the list is name. The second is landingtext. The third is subtitle.");
+    //add("adventurez:adventurez", List.of("Adventurez book", "Welcome", "default"), "Example for book translation for a book with id 'adventurez:adventurez'. The subtitle stays unchanged.");
   }
 }
